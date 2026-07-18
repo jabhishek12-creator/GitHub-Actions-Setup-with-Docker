@@ -16,6 +16,8 @@ pytest -q
 
 ### Browser interface
 
+On Windows, double-click **`Start SafeResolve.bat`** in File Explorer. It starts without a terminal and opens the browser automatically. Keep the project folder in place while it is running.
+
 Run the launcher from PowerShell and keep that terminal open:
 
 ```powershell

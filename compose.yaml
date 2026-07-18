@@ -1,0 +1,14 @@
+services:
+  saferesolve:
+    build:
+      context: .
+    container_name: saferesolve-agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./saferesolve:/app/saferesolve:ro
+      - ./knowledge:/app/knowledge:ro
+      - ./artifacts:/app/artifacts
+    environment:
+      SAFERESOLVE_LOG_SALT: ${SAFERESOLVE_LOG_SALT:-docker-local-salt}
+    restart: unless-stopped
